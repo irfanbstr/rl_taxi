@@ -17,5 +17,5 @@ q_table, rewards = train_q_learning(
     episodes=10000
 )
 
-np.save("q_table_exp1.npy", q_table)
-np.save("rewards_exp1.npy", rewards)
+np.save("data/q_table_exp1.npy", q_table)
+np.save("data/rewards_exp1.npy", rewards)

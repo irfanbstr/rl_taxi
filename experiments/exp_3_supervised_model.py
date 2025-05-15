@@ -1,5 +1,8 @@
+import os
+import sys
 import numpy as np
 import gymnasium as gym
+import sklearn
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
@@ -35,5 +38,7 @@ env.close()
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
 model = RandomForestRegressor().fit(X_train, y_train)
 predictions = model.predict(X_test)
+
+print(predictions)
 
 print("MSE:", mean_squared_error(y_test, predictions))

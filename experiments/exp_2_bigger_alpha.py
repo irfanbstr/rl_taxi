@@ -9,9 +9,11 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from train_q_learning import train_q_learning
 
 q_table, rewards = train_q_learning(
+    alpha=1,
+    gamma=0.1,
     epsilon=1.0,
     epsilon_min=0.01,
-    epsilon_decay=0.9,  # Faster decay
+    epsilon_decay=0.995,  # Faster decay
     episodes=10000
 )
 
